@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="backend/src/Reservation.Api/Reservation.Api.csproj" />
+  <Project Path="backend/src/Reservation.Application/Reservation.Application.csproj" />
+  <Project Path="backend/src/Reservation.Domain/Reservation.Domain.csproj" />
+  <Project Path="backend/src/Reservation.Infrastructure/Reservation.Infrastructure.csproj" />
+  <Project Path="backend/test/Reservation.Domain.Tests/Reservation.Domain.Tests.csproj" />
+</Solution>
