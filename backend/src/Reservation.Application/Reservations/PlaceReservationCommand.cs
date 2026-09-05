@@ -18,6 +18,13 @@ namespace Reservation.Application.Reservations {
 
     public sealed record PlaceReservationResult(Guid ReservationId, string status, string[]? TableNo);
 
+    public sealed class QueryReservationHandler(
+                IReservationRepository repository
+        ) {
+        public async Task<ReservationAggregate?> FindAsync(Guid id,CancellationToken ct=default) {
+            return await repository.FindAsync(ReservationId.From(id), ct);
+        }
+    }
     public sealed class PlaceReservationHandler(
         IReservationRepository repository,
         ITableAllocator allocator,

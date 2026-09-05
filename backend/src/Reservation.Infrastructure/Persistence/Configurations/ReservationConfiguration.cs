@@ -49,8 +49,8 @@ namespace Reservation.Infrastructure.Persistence.Configurations {
                 s.Property(x => x.Duration)
                  .HasColumnName("Duration")
                  //.HasConversion(t => (int)t.Minutes, f => TimeSpan.FromMinutes(f))
-                 //小心,不是(int)t.Minutes,而是TotalMilliseconds
-                 .HasConversion(t => (int)t.TotalMilliseconds, f => TimeSpan.FromMinutes(f))
+                 //小心,不是(int)t.Minutes,but is TotalMinutes!!
+                 .HasConversion(t => (int)t.TotalMinutes, f => TimeSpan.FromMinutes(f))
                  .IsRequired();
                 s.HasIndex(x => x.StartAt).HasDatabaseName("IX_Reservation_StartAt");
             });

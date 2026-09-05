@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /backend/src/Reservation.Api/appsettings.json
 /backend/src/Reservation.Api/appsettings.json
+# Visual Studio local file history
+.vshistory/
